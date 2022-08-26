@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    >
+
+    <Spinner
+        android:id="@+id/spinnerKFactor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/googleExplination"
+        android:layout_alignRight="@+id/googleExplination"
+        android:layout_below="@+id/googleExplination"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="43dp"
+        android:entries="@array/spinnerValueKFactor"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/blastFragDistBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/blastFragDistance"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/kfactorTable"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:textSize="18sp"
+        android:text="@string/kFactorTable"
+        android:layout_below="@+id/blastFragDistBanner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:id="@+id/fragTable"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="18sp"
+        android:text="@string/fragTable"
+        android:layout_below="@+id/kfactorTable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/plot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPlotToGoogleEarth"
+        android:text="@string/plotToGoogleEarth"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/googleEarthInfoBanner"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragTable"
+        android:layout_centerHorizontal="true"
+        android:text="@string/googleEarthInfo" />
+
+
+    <Spinner
+        android:id="@+id/spinnerKFactor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerKFactor1"
+        android:layout_alignStart="@+id/spinnerKFactor1"
+        android:layout_below="@+id/spinnerKFactor1"
+        android:layout_marginTop="11dp"
+        android:entries="@array/spinnerValueKFactor"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/googleExplination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/googleExplanation2"
+        android:layout_below="@+id/googleEarthInfoBanner"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/innerHazView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/innerHazArea"
+        android:layout_alignTop="@+id/spinnerKFactor1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/outerHazView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/outerHazArea"
+        android:layout_alignTop="@+id/spinnerKFactor2"
+        android:layout_alignRight="@+id/innerHazView"
+        android:layout_alignEnd="@+id/innerHazView"
+        android:textSize="16dp" />
+
+
+
+</RelativeLayout>

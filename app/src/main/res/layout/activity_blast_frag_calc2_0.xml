@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    >
+
+
+    <Spinner
+        android:id="@+id/spinnerunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerValueWeightUnit"
+        android:textSize="16dp"
+        android:layout_alignBaseline="@+id/weightedit"
+        android:layout_alignBottom="@+id/weightedit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/blastfragbanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp"
+        android:text="@string/blastFragCalc"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/explosiveType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/selectExplosive"
+        android:layout_below="@+id/blastfragbanner"
+        android:layout_alignLeft="@+id/weight"
+        android:layout_alignStart="@+id/weight" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectWeight"
+        android:layout_alignBaseline="@+id/weightedit"
+        android:layout_alignBottom="@+id/weightedit"
+        android:layout_alignLeft="@+id/quantityBanner"
+        android:layout_alignStart="@+id/quantityBanner" />
+
+    <TextView
+        android:id="@+id/units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/units"
+        android:layout_above="@+id/spinnerunit"
+        android:layout_alignLeft="@+id/spinnerunit"
+        android:layout_alignStart="@+id/spinnerunit" />
+
+    <Spinner
+        android:id="@+id/spinnerexplosivetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerValueExplosives"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/explosiveType"
+        android:layout_alignLeft="@+id/explosiveType"
+        android:layout_alignStart="@+id/explosiveType" />
+
+    <EditText
+        android:id="@+id/weightedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:ems="10"
+        android:textSize="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/spinnerexplosivetype"
+        android:layout_alignLeft="@+id/quantity"
+        android:layout_alignStart="@+id/quantity" />
+
+    <Button
+        android:id="@+id/calcbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:onClick="onClickCalculate"
+        android:layout_below="@+id/totalNew"
+        android:layout_toRightOf="@+id/spinnercasetype"
+        android:layout_toEndOf="@+id/spinnercasetype" />
+
+    <Spinner
+        android:id="@+id/spinnercasetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerValueCaseType"
+        android:textSize="16dp"
+        android:layout_alignTop="@+id/calcbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/explosiveType"
+        android:layout_alignEnd="@+id/explosiveType" />
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/quantity"
+        android:ems="10"
+        android:textSize="16dp"
+        android:layout_below="@+id/spinnerunit"
+        android:layout_toRightOf="@+id/addExplosive"
+        android:layout_toEndOf="@+id/addExplosive" />
+
+    <Button
+        android:id="@+id/addExplosive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:onClick="onClickAdd"
+        android:layout_below="@+id/quantity"
+        android:layout_alignLeft="@+id/quantityBanner"
+        android:layout_alignStart="@+id/quantityBanner" />
+
+    <TextView
+        android:id="@+id/explosiveList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="@string/explosivesList"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/addExplosive"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/resetExplosiveList"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/reset"
+        android:onClick="onClickResetExplosiveList"
+        android:layout_below="@+id/quantity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/addExplosive" />
+
+    <CheckBox
+        android:id="@+id/checkBoxStacked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stacked"
+        android:layout_alignTop="@+id/calcbutton"
+        android:layout_toRightOf="@+id/calcbutton"
+        android:layout_toEndOf="@+id/calcbutton" />
+
+    <TextView
+        android:id="@+id/totalNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total NEW"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/explosiveList" />
+
+    <TextView
+        android:id="@+id/quantityBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textSize="16dp"
+        android:layout_alignBaseline="@+id/quantity"
+        android:layout_alignBottom="@+id/quantity"
+        android:layout_toLeftOf="@+id/blastfragbanner"
+        android:layout_toStartOf="@+id/blastfragbanner" />
+
+</RelativeLayout>

@@ -1,0 +1,257 @@
+<resources>
+    <string name="app_name">BangV3</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="currentGrid">Current Location</string>
+    <string name="accuracyGrid">Grid Accuracy</string>
+
+    '<!--' Blast frag calc values '-->'
+    <string name="blastFragCalc">Blast Frag Calculator</string>
+    <string name="selectExplosive">Select Explosives</string>
+    <string name="selectWeight">Weight</string>
+    <string name="units">Units</string>
+    <string name="add">Add</string>
+    <string name="explosivesList">Explosives List</string>
+    <string name="explosiveTotal"></string>
+    <string name="explosiveComponents">Explosive Components:</string>
+    <string name="kFactorBanner">K-Factor</string>
+    <string name="kFactor">Reset</string>
+    <string name="stacked">Stacked</string>
+    <string name="heavyCase">Heavy Casing</string>
+    <string name="quantity">Quantity</string>
+    <string name="computedDistance"></string>
+    <string name="addExplosiveEvent">Add Explosive Event</string>
+    <string name="blastFragDistance">Blast/Frag Distances:</string>
+    <string name="plotToGoogleEarth">Plot to Google Earth</string>
+    <string name="kFactorTable">K-Factor Table</string>
+    <string name="useMarkerLocation">Use Marker Location</string>
+    <string name="useCurrentLocation">Use Current Location</string>
+    <string name="innerHazArea">Inner Hazard Area</string>
+    <string name="outerHazArea">Outer Hazard Area</string>
+    <string name="fragTable">Frag Table:
+        \n\tMax Frag:
+        \n\tHaz Frag:
+    </string>
+
+    <string-array name="spinnerValueKFactor">
+        <item>K-Factor</item>
+        <item>14</item>
+        <item>25</item>
+        <item>50</item>
+        <item>328</item>
+        <item>500</item>
+        <item>MAX FRAG</item>
+        <item>HAZ FRAG</item>
+    </string-array>
+
+    <string-array name="spinnerValueCaseType">
+        <item>Non-Robust</item>
+        <item>Robust</item>
+        <item>EHC</item>
+    </string-array>
+
+    <string-array name="spinnerValueExplosives">
+        <item>Unknown ,1.40</item>
+        <item>TNT ,1.00</item>
+        <item>2_4 DNT ,0.85</item>
+        <item>AFX-1100 ,1.06</item>
+        <item>AFX-1209 ,1.00</item>
+        <item>AFX-1282 ,0.68</item>
+        <item>AFX-757 ,1.55</item>
+        <item>AFX-795 ,1.04</item>
+        <item>AFX-900 ,1.50</item>
+        <item>Amatol 50/50 ,0.97</item>
+        <item>Amatol 60/40 ,0.97</item>
+        <item>Amatol 80/20 ,1.30</item>
+        <item>Ammonal ,1.22</item>
+        <item>ADN ,0.90</item>
+        <item>AN ,0.58</item>
+        <item>ANAL ,1.00</item>
+        <item>ANNIE ,1.00</item>
+        <item>ANAL/Sugar 85/10/5 ,0.70</item>
+        <item>AN/Antifreeze 90/10 ,0.61</item>
+        <item>Ammonium Perchlorate AP ,0.60</item>
+        <item>ANFO ,0.83</item>
+        <item>ANFO 20/80 ,0.98</item>
+        <item>ANFO 25/75 ,1.01</item>
+        <item>ANFO 30/70 ,1.03</item>
+        <item>ANFO 35/65 ,1.04</item>
+        <item>ANFO 40/60 ,1.06</item>
+        <item>ANFO 45/55 ,1.07</item>
+        <item>ANFO 50/50 ,1.03</item>
+        <item>ANFO 55/45 ,1.02</item>
+        <item>ANFO 60/40 ,1.00</item>
+        <item>ANFO 65/35 ,0.99</item>
+        <item>ANFO 70/30 ,0.97</item>
+        <item>ANFO 75/25 ,0.95</item>
+        <item>ANFO 80/20 ,0.94</item>
+        <item>ANFO 96/4 ,0.83</item>
+        <item>ANFO TOVEX ,0.90</item>
+        <item>Baratol ,0.83</item>
+        <item>Baronal ,1.04</item>
+        <item>Black Powder ,0.43</item>
+        <item>Carbon Tetrachloride/AL 35/65 ,0.09</item>
+        <item>CH-6 ,1.38</item>
+        <item>Comp A-3 ,1.09</item>
+        <item>Comp A-5 ,1.46</item>
+        <item>Comp B ,1.16</item>
+        <item>Comp B-2 ,1.16</item>
+        <item>Comp B-4 ,1.27</item>
+        <item>Comp C ,1.20</item>
+        <item>Comp C-2 ,1.27</item>
+        <item>Comp C-3 ,1.09</item>
+        <item>Comp C-4 ,1.37</item>
+        <item>Cyclotol 50/50 ,1.16</item>
+        <item>Cyclotol 60/40 ,1.16</item>
+        <item>Cyclotol 65/35 ,1.11</item>
+        <item>Cyclotol 70/30 ,1.14</item>
+        <item>Cyclotol 75/25 ,1.26</item>
+        <item>DATB ,0.96</item>
+        <item>Depth Bomb Explosive DBX ,1.27</item>
+        <item>DESTEX ,1.21</item>
+        <item>DEGN Liquid ,0.77</item>
+        <item>Dynamite low velocity ,0.57</item>
+        <item>Dynamite medium velocity ,0.86</item>
+        <item>Ednatol 55/45 ,1.10</item>
+        <item>EDNA ,1.22</item>
+        <item>EGDN ,1.56</item>
+        <item>Explosive D ,0.91</item>
+        <item>Exp Grade Prill/Diesel 90/10 ,0.68</item>
+        <item>Exp Grade Prill/Diesel 96/4 ,0.70</item>
+        <item>Exp Grade Prill/Diesel 94/6 ,0.79</item>
+        <item>Fert Grade Prill/Diesel 94/6 ,0.80</item>
+        <item>Fert Grade Prill/Diesel 92/8 ,0.70</item>
+        <item>Fert Grade Prill/Diesel 96/4 ,0.52</item>
+        <item>Fixor Liquid Binary ,0.85</item>
+        <item>Flash Powder ,0.80</item>
+        <item>Ground ANAL 325 mesh 85/15 ,0.92</item>
+        <item>Ground ANAL 400 mesh 90/10 ,0.80</item>
+        <item>Ground AN/Bullseye GP ,0.57</item>
+        <item>Ground AN/Diesel 94/6 ,0.71</item>
+        <item>Ground AN/Icing Sugar 91.7/8.3 ,0.53</item>
+        <item>Ground AN/Lampblack 85/15 ,0.07</item>
+        <item>Ground AN/Nitrobenzene 90/10 ,0.77</item>
+        <item>Ground AN/Nitromethane 71/29 ,0.75</item>
+        <item>Ground AN/Sulphur 85/15 ,0.48</item>
+        <item>Ground AN/ Ti spong 90/10 ,0.60</item>
+        <item>H-6 ,1.38</item>
+        <item>HBX-1 ,1.17</item>
+        <item>HBX-3 ,1.14</item>
+        <item>HMTD ,1.00</item>
+        <item>HMX ,1.56</item>
+        <item>HNS ,1.30</item>
+        <item>HTA-3 ,1.20</item>
+        <item>Hydrogen Peroxide/Acetone 87/13 ,0.09</item>
+        <item>Lead Azide ,0.39</item>
+        <item>Lead Styphnate ,0.32</item>
+        <item>LX-01 ,1.58</item>
+        <item>LX-02 ,1.30</item>
+        <item>LX-03 ,1.24</item>
+        <item>LX-04 ,1.20</item>
+        <item>LX-07 ,1.31</item>
+        <item>LX-08 ,1.47</item>
+        <item>LX-09 ,1.48</item>
+        <item>LX-10 ,1.49</item>
+        <item>LX-11 ,1.03</item>
+        <item>LX-14 ,1.85</item>
+        <item>LX-15 ,1.40</item>
+        <item>LX-16 ,1.46</item>
+        <item>LX-17 ,1.20</item>
+        <item>Mercury Fulminate ,0.29</item>
+        <item>Minol II ,1.20</item>
+        <item>Nitric Acid/Nitrobenzene 72/28 ,1.26</item>
+        <item>Nitrocellulose ,0.96</item>
+        <item>Nitroglycerine ,1.81</item>
+        <item>Nitroguanidine ,0.79</item>
+        <item>Nitrostarch ,0.85</item>
+        <item>Octol 70/25 ,1.16</item>
+        <item>Octol 70/30 ,1.14</item>
+        <item>Octol 75/25 ,1.14</item>
+        <item>Octol 85/15 ,1.30</item>
+        <item>PAX-21 ,1.20</item>
+        <item>PAX-2A ,1.40</item>
+        <item>PBX(AF)-108 ,1.43</item>
+        <item>PBX-9010 ,1.29</item>
+        <item>PBX-9404 ,1.44</item>
+        <item>PBX-9501 ,1.52</item>
+        <item>PBX-9502 ,1.33</item>
+        <item>PBXIH-135 ,1.60</item>
+        <item>PBXN-113 ,1.60</item>
+        <item>PBXIH-18 ,1.70</item>
+        <item>PBXN-103 ,1.31</item>
+        <item>PBXN-105 ,1.11</item>
+        <item>PBXN-106 ,1.46</item>
+        <item>PBXN-109 ,1.43</item>
+        <item>PBXN-11 ,1.30</item>
+        <item>PBXW-11 ,1.30</item>
+        <item>PBXN-110 ,1.44</item>
+        <item>PBXN-111 ,1.40</item>
+        <item>PBXW-115 ,1.40</item>
+        <item>PBXN-113 ,1.60</item>
+        <item>PBXIH-135 ,1.60</item>
+        <item>PBXN-201 ,1.20</item>
+        <item>PBXN-4 ,0.85</item>
+        <item>PBXN-5 ,1.49</item>
+        <item>HMX-95 ,1.49</item>
+        <item>PBXN-6 ,1.01</item>
+        <item>PBXC-12 ,1.01</item>
+        <item>PBXN-9 ,1.38</item>
+        <item>PE-3A ,1.30</item>
+        <item>PE-4A ,1.30</item>
+        <item>PE-9 ,1.37</item>
+        <item>Pentolite 50/50 ,1.38</item>
+        <item>Pentolite 90/10 ,1.26</item>
+        <item>PETN ,1.27</item>
+        <item>Photoflash Powder ,0.83</item>
+        <item>Picratol 52/48 ,0.93</item>
+        <item>Picric Acid ,1.07</item>
+        <item>Potassium Permanganate/AL 90/10 ,0.18</item>
+        <item>Potassium Permanganate/AL 80/20 ,0.60</item>
+        <item>Potassium Permanganate/AL/Sugar 80/10/10 ,0.11</item>
+        <item>Potassium Permanganate/AL/Sugar 85/10/5 ,0.09</item>
+        <item>Potassium Permanganate/Icing Sugar 90/10 ,0.59</item>
+        <item>Potassium Permanganate/Icing Sugar 80/20 ,0.16</item>
+        <item>Potassium Permanganate/Mg 90/10 ,0.80</item>
+        <item>Potassium Permanganate/Sulphur 90/10 ,0.59</item>
+        <item>Potassium Permanganate/Sulphur 95/5 ,0.73</item>
+        <item>RDX ,1.46</item>
+        <item>SEMTEX ,1.35</item>
+        <item>SEMTEX 2P ,1.35</item>
+        <item>Sodium Chlorate-Nitrobenzene ,0.50</item>
+        <item>Tetryl ,1.07</item>
+        <item>Tetrytol 40/60 ,1.12</item>
+        <item>Tetrytol 65/35 ,1.19</item>
+        <item>Tetrytol 70/30 ,1.20</item>
+        <item>Tetrytol 75/25 ,1.22</item>
+        <item>Tetrytol 80/20 ,1.23</item>
+        <item>TNETB ,1.36</item>
+        <item>Torpex ,1.28</item>
+        <item>TATP ,0.88</item>
+        <item>Tritonal 80/20 ,1.07</item>
+        <item>Urea Nitrate ,0.56</item>
+    </string-array>
+
+    <string-array name="spinnerValueWeightUnit">
+        <item>lbs</item>
+        <item>kgs</item>
+    </string-array>
+
+    <string-array name="spinnerValueDistanceUnit">
+        <item>ft</item>
+        <item>M</item>
+    </string-array>
+
+    <string name="reset">Reset</string>
+    <string name="calculate">Calculate</string>
+    <string name="title_activity_blast_frag_calc1_2">Map</string>
+    <string name="title_activity_nuc_tool_spec1_0">NucToolSpec1_0</string>
+
+    <string name="googleEarthInfo">Google Earth Information</string>
+    <string name="MGRSHint">MGRS of Explosives</string>
+    <string name="googleExplanation">Enter the info below to plot a hazard area</string>
+    <string name="googleExplanation2">The selected K-Factor radius will be added to your GRG</string>
+    <string name="markerName">marker name</string>
+
+
+
+
+    </resources>
