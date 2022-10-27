@@ -215,23 +215,25 @@ public class BlastFragCalc2_1 extends AppCompatActivity {
         Spinner hazRadiusView = (Spinner) findViewById(R.id.spinnerKFactor1);
         hazRadiusSpinnerSelection = hazRadiusView.getSelectedItem().toString();
 
-        if(hazRadiusSpinnerSelection.compareTo("K-Factor") == 0){
 
-            Toast.makeText(context, "Please select a k-factor or a fragmentation distance.", duration).show();
+       // if(hazRadiusSpinnerSelection.compareTo("K-Factor") == 0){
+            if(hazRadiusSpinnerSelection.compareTo(context.getString(R.string.kFactorBanner)) == 0){
+
+            Toast.makeText(context, context.getString(R.string.kfactorPrompt), duration).show();
             return;
 
-        }else if(hazRadiusSpinnerSelection.compareTo("MAX FRAG") == 0){
+        }else if(hazRadiusSpinnerSelection.compareTo(context.getString(R.string.maxFrag)) == 0){
 
             hazardRadius = maxFragMeters;
             eventMarker.setPrimaryHazRadius(hazardRadius);
-            eventMarker.setPrimaryCircleKFactor("MAX FRAG");
+            eventMarker.setPrimaryCircleKFactor(context.getString(R.string.maxFrag));
 
 
-        }else if(hazRadiusSpinnerSelection.compareTo("HAZ FRAG") == 0){
+        }else if(hazRadiusSpinnerSelection.compareTo(context.getString(R.string.hazFrag)) == 0){
 
             hazardRadius = hazFragMeters;
             eventMarker.setPrimaryHazRadius(hazardRadius);
-            eventMarker.setPrimaryCircleKFactor("HAZ FRAG");
+            eventMarker.setPrimaryCircleKFactor(context.getString(R.string.hazFrag));
 
 
         }else{
@@ -258,17 +260,17 @@ public class BlastFragCalc2_1 extends AppCompatActivity {
             hazardRadiusSec = 0;
             //return;
 
-        }else if(hazRadiusSpinnerSelectionSec.compareTo("MAX FRAG") == 0){
+        }else if(hazRadiusSpinnerSelectionSec.compareTo(context.getString(R.string.maxFrag)) == 0){
 
             hazardRadiusSec = maxFragMeters;
             eventMarker.setSecondaryHazRadius(hazardRadiusSec);
-            eventMarker.setSecondaryCircleKFactor("MAX FRAG");
+            eventMarker.setSecondaryCircleKFactor(context.getString(R.string.maxFrag));
 
-        }else if(hazRadiusSpinnerSelectionSec.compareTo("HAZ FRAG") == 0){
+        }else if(hazRadiusSpinnerSelectionSec.compareTo(context.getString(R.string.hazFrag)) == 0){
 
             hazardRadiusSec = hazFragMeters;
             eventMarker.setSecondaryHazRadius(hazardRadiusSec);
-            eventMarker.setSecondaryCircleKFactor("HAZ FRAG");
+            eventMarker.setSecondaryCircleKFactor(context.getString(R.string.hazFrag));
 
         }else{
 

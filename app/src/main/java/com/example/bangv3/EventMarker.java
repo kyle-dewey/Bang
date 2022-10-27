@@ -1,6 +1,9 @@
 package com.example.bangv3;
 
 import java.io.Serializable;
+import android.content.Context;
+
+
 
 public class EventMarker implements Serializable{
 
@@ -17,18 +20,23 @@ public class EventMarker implements Serializable{
     private boolean stacked;
     private boolean displayHazard;
     private String caseType;
+    private Context mContext ;
 
     //used to display the k-factor being represented by the circles on the map
     private String primaryCircleKFactor;
     private String secondaryCircleKFactor;
 
 
+
     //constructors
-    public EventMarker(int newID, String newName,double newLatPosition, double newLongPosition){
+    public EventMarker( int newID, String newName,double newLatPosition, double newLongPosition, String newDescription){
 
         ID = newID;
         markerName = newName;
-        description = "Add a description: This can be anything you think is important about this place or event";
+
+        //set the description equal to the string asset at defaultDescriptionBlurb
+        //description = "Add a description: This can be anything you think is important about this place or event";
+        description = newDescription;
         latPosition = newLatPosition;
         longPosition = newLongPosition;
         NEW = 0.0;
@@ -39,10 +47,11 @@ public class EventMarker implements Serializable{
         stacked = false;
         caseType = "Non-Robust";
         displayHazard = false;
-        primaryCircleKFactor = "None";
-        secondaryCircleKFactor = "None";
+        primaryCircleKFactor = " ";
+        secondaryCircleKFactor = " ";
 
     }
+
 
     //getters
     public int getID(){

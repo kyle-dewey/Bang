@@ -43,6 +43,9 @@
         <item>HAZ FRAG</item>
     </string-array>
 
+    <string name="maxFrag">MAX FRAG</string>
+    <string name="hazFrag">HAZ FRAG</string>
+
     <string-array name="spinnerValueCaseType">
         <item>Non-Robust</item>
         <item>Robust</item>
@@ -163,9 +166,8 @@
         <item>Nitroglycerine ,1.81</item>
         <item>Nitroguanidine ,0.79</item>
         <item>Nitrostarch ,0.85</item>
-        <item>Octol 70/25 ,1.16</item>
+        <item>Octol 75/25 ,1.16</item>
         <item>Octol 70/30 ,1.14</item>
-        <item>Octol 75/25 ,1.14</item>
         <item>Octol 85/15 ,1.30</item>
         <item>PAX-21 ,1.20</item>
         <item>PAX-2A ,1.40</item>
@@ -243,15 +245,37 @@
     <string name="reset">Reset</string>
     <string name="calculate">Calculate</string>
     <string name="title_activity_blast_frag_calc1_2">Map</string>
-    <string name="title_activity_nuc_tool_spec1_0">NucToolSpec1_0</string>
 
     <string name="googleEarthInfo">Google Earth Information</string>
     <string name="MGRSHint">MGRS of Explosives</string>
     <string name="googleExplanation">Enter the info below to plot a hazard area</string>
-    <string name="googleExplanation2">The selected K-Factor radius will be added to your GRG</string>
+    <string name="googleExplanation2">The selected K-Factor radius will be added to your map</string>
+
+
+    <!-- Title page assets -->
+    <string name="bang">Bang</string>
+
+
+    <!-- Custom info window assets -->
     <string name="markerName">marker name</string>
+    <string name="distance">Distance</string>
+    <string name="bearing">Bearing</string>
+    <string name="currentLocation">Current Location</string>
+
+    <!-- Edit marker activity assets -->
+    <string name="markerNameDefault">marker name</string>
+    <string name="netExplosiveWeight">Net Explosive Weight</string>
+    <string name="redCircle">Red Circle K-Factor: </string>
+    <string name="greenCircle">Green Circle K-Factor: </string>
+    <string name="none">none</string>
+    <string name="plotHazardArc">Plot Hazard Arc</string>
+    <string name="description">Description</string>
+    <string name="kfactorPrompt">Please select a k-factor or a fragmentation distance.</string>
+
+    <!-- Event marker assets-->
+    <string name="defaultDescriptionBlurb">Add a description: This can be anything you think is important about this place or event</string>
+    <string name="marker">Marker</string>
 
 
 
-
-    </resources>
+</resources>

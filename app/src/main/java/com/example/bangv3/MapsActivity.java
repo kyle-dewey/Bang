@@ -461,7 +461,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     //writes an updated snippit for markers based on two latlngs
-    public static String writeSnippet(LatLng currLatLng, LatLng markerLatLng){
+    public static String writeSnippet(LatLng currLatLng, LatLng markerLatLng, String distanceString, String bearingString){
 
         //computes bearing
         double bearing = Math.round(computeBearing(currLatLng, markerLatLng));
@@ -471,8 +471,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double distance = calculateDistance(markerLatLng , currLatLng);
 
         //concatinates a string to return
-        String result = ( "Distance: " + Math.round(distance) + " m "
-                + "Bearing: " + bearing + " deg" );
+        //String result = ( "Distance: " + Math.round(distance) + " m " + "Bearing: " + bearing + " deg" );
+        String result = ( distanceString+ ": " + Math.round(distance) + " m " + bearingString + ": " + bearing + " deg" );
 
         return result;
     }
@@ -500,8 +500,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void createEventMarker(LatLng latLng){
 
         System.out.println("createEventMarker() CALLED");
-        EventMarker newEventMarker = new EventMarker(eventMarkerSvcImpl.getCurrentID(),"Marker " +
-                Integer.toString(eventMarkerSvcImpl.getCurrentID()) ,latLng.latitude,latLng.longitude);
+        //EventMarker newEventMarker = new EventMarker(eventMarkerSvcImpl.getCurrentID(),"Marker " +
+                //Integer.toString(eventMarkerSvcImpl.getCurrentID()) ,latLng.latitude,latLng.longitude);
+
+        EventMarker newEventMarker = new EventMarker(eventMarkerSvcImpl.getCurrentID(),getString(R.string.marker) + " " +
+                Integer.toString(eventMarkerSvcImpl.getCurrentID()) ,latLng.latitude,latLng.longitude, context.getString(R.string.defaultDescriptionBlurb));
 
         eventMarkerSvcImpl.addEventMarker(newEventMarker);
         //eventMarkerArrayList.add(newEventMarker);
@@ -610,7 +613,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //adds the current location marker
         currMarker = mMap.addMarker(new MarkerOptions()
                 .position(currentLatLong)
-                .title("Current Location ")
+                //.title("Current Location ")
+                .title(context.getString(R.string.currentLocation))
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
         );
 

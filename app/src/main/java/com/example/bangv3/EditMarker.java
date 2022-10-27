@@ -35,6 +35,7 @@ public class EditMarker extends FragmentActivity {
     private int idNumber;
     private EventMarkerSvcImpl eventMarkerSvcImpl;
     private EventMarker eventMarker;
+    private Context mContext = this;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,18 +70,24 @@ public class EditMarker extends FragmentActivity {
         //finds the eventMarker by its id in the arrayList
         eventMarker = eventMarkerSvcImpl.findEventMarkerByID(idNumber);
 
-        //populates the different views in the layout with the relivaint marker data
+        //populates the different views in the layout with the relavant marker data
         markerNameEditText.setText(eventMarker.getName());
 
 
         markerMGRSTextView.setText(eventMarker.getLatPosition() + ", " + eventMarker.getLongPosition());
 
-        //shunted out until i can get the library to load
-        //markerMGRSTextView.setText(Coordinates.mgrsFromLatLon(eventMarker.getLatPosition(),eventMarker.getLongPosition()));
+        //sets the different text views with the string assets
         markerdescriptionEditText.setText(eventMarker.getDescription());
-        markerNEWTextView.setText("NEW: " + Double.toString(eventMarker.getNEW()) + " lbs");
-        markerPrimaryKFactorTextView.setText("Red Circle: K" + eventMarker.getPrimaryCircleKFactor());
-        markerSecondaryKFactorTextView.setText("Green Circle: K" + eventMarker.getSecondaryCircleKFactor());
+
+        //new code that draws the new string assets for multilingual version
+        markerNEWTextView.setText(mContext.getString(R.string.netExplosiveWeight)+ ": " + Double.toString(eventMarker.getNEW()) + " lbs");
+        markerPrimaryKFactorTextView.setText(mContext.getString(R.string.redCircle)+ ": " + eventMarker.getPrimaryCircleKFactor());
+        markerSecondaryKFactorTextView.setText(mContext.getString(R.string.greenCircle)+ ": " + eventMarker.getSecondaryCircleKFactor());
+
+        //old code that was used in the english only version
+        //markerNEWTextView.setText("NEW: " + Double.toString(eventMarker.getNEW()) + " lbs");
+        //markerPrimaryKFactorTextView.setText("Red Circle: K" + eventMarker.getPrimaryCircleKFactor());
+        //markerSecondaryKFactorTextView.setText("Green Circle: K" + eventMarker.getSecondaryCircleKFactor());
         markerPlotHazCheckBox.setChecked(eventMarker.getDisplayHazard());
 
     }

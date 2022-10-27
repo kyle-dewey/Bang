@@ -60,7 +60,7 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter{
         try {
 
             if (!snippet.equals("")) {
-                tvSnippet.setText(MapsActivity.writeSnippet(currMarker.getPosition(), marker.getPosition()));
+                tvSnippet.setText(MapsActivity.writeSnippet(currMarker.getPosition(), marker.getPosition(), mContext.getString(R.string.distance) , mContext.getString(R.string.bearing)));
             }
 
 
@@ -88,8 +88,8 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter{
 
         }catch(NullPointerException i){
 
-            tvSnippet.setText("                                                    ");
-            markerNameTextView.setText("Current position");
+            tvSnippet.setText(mContext.getString(R.string.currentLocation));
+            markerNameTextView.setText(" ");
 
         }
 

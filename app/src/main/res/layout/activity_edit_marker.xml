@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/SecondaryKFactorTextView"
         android:layout_centerHorizontal="true"
-        android:text="Plot Hazard Arcs" />
+        android:text="@string/plotHazardArc" />
 
 
 </RelativeLayout>
