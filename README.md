@@ -7,4 +7,4 @@ a developers guide will be added to this repository shortly. I am by no means a 
 living project with EOD technicians from across different communities helping to build and maintain this code. 
 
 ****DOWNLOAD INSTRUCTIONS****
-To download bang just click on the .apk file in the home directory of this project. 
+To download bang just click on the .apk file in the home directory of this project or download the apk form the project website at defusinguncertainty.org
