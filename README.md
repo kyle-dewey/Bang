@@ -7,4 +7,7 @@ a developers guide will be added to this repository shortly. I am by no means a 
 living project with EOD technicians from across different communities helping to build and maintain this code. 
 
 ****DOWNLOAD INSTRUCTIONS****
-To download bang just click on the .apk file in the home directory of this project or download the apk form the project website at defusinguncertainty.org
+To download bang just click on the .apk file in the home directory of this project or download the apk form the project website at defusinguncertainty.org 
+
+****DEVELOPERS!****
+If you are interested in making your own version of BANG, or in translation and localization of the app send me an email and I will give you access to the source code. For translation and localization I have a fairly straight forward pipeline for building local versions. 
